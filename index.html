@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+
+  <h1>Fitness Tracker</h1>
+
+  <!-- Mode Toggle Button -->
+  <button id="toggle-mode">🌞</button>
+
+  <!-- Navigation Tabs -->
+  <div class="nav-buttons">
+    <button id="steps-tab">Steps</button>
+    <button id="exercise-tab">Exercise</button>
+    <button id="food-tab">Food Intake</button>
+    <button id="water-tab">Water</button>
+    <button id="sleep-tab">Sleep</button>
+  </div>
+
+  <!-- Steps Tab -->
+  <div id="steps-tab-content" class="tab-content active">
+    <h2>Log Steps</h2>
+    <input type="number" id="steps" title="Steps" placeholder="Enter number of steps">
+    <input type="datetime-local" id="steps-time" title="Steps Time" placeholder="Enter time">
+    <button onclick="logSteps()">Log Steps</button>
+    <h3>Total Steps: <span id="steps-display">0</span></h3>
+    <ul id="steps-history-list" class="history-list"></ul>
+  </div>
+
+  <!-- Exercise Tab -->
+  <div id="exercise-tab-content" class="tab-content">
+    <h2>Log Exercise</h2>
+    <input type="text" id="exercise-name" title="Exercise Name" placeholder="Exercise Name">
+    <input type="number" id="exercise-sets" title="Sets" placeholder="Sets (optional)">
+    <input type="number" id="exercise-reps" title="Reps" placeholder="Reps (optional)">
+    <input type="datetime-local" id="exercise-time" title="Exercise Time" placeholder="Time">
+    <button onclick="logExercise()">Log Exercise</button>
+    <ul id="exercise-history-list" class="history-list"></ul>
+  </div>
+
+  <!-- Food Intake Tab -->
+  <div id="food-tab-content" class="tab-content">
+    <h2>Log Food Intake</h2>
+    <input type="text" id="food-name" title="Food Name" placeholder="Food Name">
+    <input type="number" id="calories" title="Calories" placeholder="Calories">
+    <input type="datetime-local" id="food-time" title="Food Time" placeholder="Time">
+    <button onclick="logFood()">Log Food</button>
+    <ul id="food-history-list" class="history-list"></ul>
+  </div>
+
+  <!-- Water Tab -->
+  <div id="water-tab-content" class="tab-content">
+    <h2>Log Water Intake</h2>
+    <input type="number" id="water-amount" title="Water Amount" placeholder="Water Amount (L)">
+    <input type="datetime-local" id="water-time" title="Water Time" placeholder="Time">
+    <button onclick="logWater()">Log Water</button>
+    <ul id="water-history-list" class="history-list"></ul>
+  </div>
+
+  <!-- Sleep Tab -->
+  <div id="sleep-tab-content" class="tab-content">
+    <h2>Log Sleep</h2>
+    <input type="number" id="sleep-hours" title="Sleep Hours" placeholder="Sleep Hours">
+    <input type="number" id="sleep-quality" title="Sleep Quality" placeholder="Sleep Quality (1-10)">
+    <input type="datetime-local" id="sleep-time" title="Sleep Time" placeholder="Time">
+    <button onclick="logSleep()">Log Sleep</button>
+    <ul id="sleep-history-list" class="history-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
